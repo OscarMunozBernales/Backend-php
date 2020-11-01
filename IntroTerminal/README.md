@@ -145,3 +145,56 @@ Los archivos de texto, tambien son archivos binarios pero que son legibles para 
 Utilidades interactivas, programas que procesan texnto en tiempo real
 
 Alguna de ellos son VIM  y nano.
+
+## 2.4. Utilidades batch y batch avandados.
+Utilidades batch o procesamiento por lotes, son programas que procesan texto y emiten el resultado.
+
+Utilidades Batch
+cat: Nos muestra el contenido completo de un archivo
+
+> cat tables.txt
+
+head: Nos muestra las primeras lineas (También podemos escoger cuantas lineas queremos utilizando el modificador [-n #]).
+Ejemplos:
+
+> head tables.txt
+
+> head -n 5 tables.txt
+
+tail: Muestras las ultimas lineas del final (Inverso a head, tambien le funciona modificadores)
+Ejemplos:
+
+> tailtables.txt
+
+> tail -n 5 tables.txt
+    
+### Utilidades Batch Avanzadas:
+    
+grep: Permite trabajar con expresiones regulares, funciona como un buscador dentro del archivo.
+
+> grep hanks dump1.sql = [comando][expresión regular][archivo]
+
+> Para buscar sin importar si esta en mayuscula o miniscula:
+
+> grep -i hanks dump1.sql
+
+> Tambien podemos buscar una expresión de una frase que termine con la misma palabra que estemos buscando:
+
+> grep -i “hanks’),$” .
+
+sed: Screem Editor, tratamiento de flujos de caracteres. Este comando nos permite reemplazar una expresión por otra.
+ejemplos:
+
+> sed ‘s/hanks/selleck/g’ dump1.sql = [comando][subcomando- sustitución][expresión original][nueva expresión][modificador-(/g de global, indica que tiene que hacerse a lo largo de todo el flujo)][Indicar cual es el flujo a utilizar (Archivo de texto)]
+
+SED no modifica el archivo, lo que hace es crear un nuevo flujo con la modificación
+
+Para eliminar la ultima linea podemos utilizar:
+
+> sed ‘$d’ nuevasPelis.csv = [Comando][’$sub-comando’][archivo]
+
+awk: Trataminento de texto delimitado, este comando sirve para trabajar con archivos de textos delimitados por comas.
+Ejemplos:
+
+> awk -F ‘;’ ‘{ print $1}’ nuevasPelis.csv
+
