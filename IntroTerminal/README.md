@@ -33,3 +33,20 @@ Vamos a ver unos comandos:
 Utilidades de CLI.
 - autocompletar con la tecla tab.
 - la flecha para arriba muestra los comandos ya escritos.
+
+## 1.2. ¿Qué es y cómo funciona el sistema de archivos?  - Organización de archivos.
+Cada archivo esta compuesto por su nombre y ubicación, esto es lo que llamamos el path
+```
+directorio/directorio/archivo.ext
+```
+Cabe recalcar que dentro de un directorio no puede existir dos archivos con los mismos nombre, ademas que los archivos no pueden tener caracteres especiales.
+Ahora vamos a mostrar unos comandos que sirven para organizar los archivos:
+- ls: muestra los archivos del direcctorio.
+- ls -a: muestra todos los archivos del directorio incluso los ocultos.
+- pwd: nos muestra la ubicación en la que nos encontramos.
+- cd: sirve para cambiar de directorio.
+- mkdir: crea un directorio.
+- cp archivo ubicación archivo a copiar: copia un archivo
+- rm: borra un archivo.
+- mv: mueve un archivo.
+- rmdir: borra un directorio.
