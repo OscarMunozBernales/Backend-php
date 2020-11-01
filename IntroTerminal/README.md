@@ -135,3 +135,13 @@ rmdir: eliminar un directorio. En este caso es importante resaltar que, para que
 
 > rmdir [ruta / nombre del directorio a eliminar]
 
+## 2.3. Manejo de archivos binario y utilidades interectivas.
+De todos los archivos que hay en nuestra computadora hay una distinción muy importante, los archivos binarios y de texto.
+
+Los archivos binarios, son programas ejecutables, documentos fotos, videos, etc.
+
+Los archivos de texto, tambien son archivos binarios pero que son legibles para los humanos.
+
+Utilidades interactivas, programas que procesan texnto en tiempo real
+
+Alguna de ellos son VIM  y nano.
