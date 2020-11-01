@@ -8,4 +8,28 @@ En este curso vamos aprender lo siguiente:
 - Cómo aprovechar la terminal al maximo.
 
 ## 1.1. ¿Que es y como funciona la terminal?
+Para empezar vamos a explicar que es una computadora (a grandes rasgos), en una computadora tenemos memoria, en esa memoria se almacenan instrucciones yu algunos datos, lo que hace la computadora es revisar periodicamente esa memoria, levantar una instrucción, ejecutarla y guardar los resultados (eso se repite constantemente).
+La computadora tiene un lenguaje unico que no es complatible con nuestro lenguajes, es por esto que tenemos una terminal, algo asi como un intermediario entre la computadora y nosotros. Lo mismo que se puede realizar en una interfaz grafica se puede ejecutar en una terminal.
 
+### Los comandos.
+Un comando consiste en:
+- Nombre del programa.
+- Parámetros.
+- Modificadores.
+
+La diferencia entre los parametros y los modificadores, es que los modificadores alteran una instrucción y los parametros son simplemente información adicional para la ejecución de un programa.
+
+```
+comando -flag1 -flag2 -arg1 -arg2 
+```
+
+Vamos a ver unos comandos:
+- date: muestra la fecha de hoy.
+- echo "mensaje": muestra un mensaje en la pantalla
+- man: es un manual que muestra información de un comando, por ejemplo **man date**
+- history: muestra el historial de todos los comandos escritos.
+- !hash (sacado del history): ejecuta el comando del hash
+
+Utilidades de CLI.
+- autocompletar con la tecla tab.
+- la flecha para arriba muestra los comandos ya escritos.
