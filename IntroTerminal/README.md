@@ -34,7 +34,9 @@ Utilidades de CLI.
 - autocompletar con la tecla tab.
 - la flecha para arriba muestra los comandos ya escritos.
 
-## 1.2. ¿Qué es y cómo funciona el sistema de archivos?  - Organización de archivos.
+# 2. APrneder a manipular archivos a través de la terminal.
+
+## 2.1. ¿Qué es y cómo funciona el sistema de archivos?  - Organización de archivos.
 Cada archivo esta compuesto por su nombre y ubicación, esto es lo que llamamos el path
 ```
 directorio/directorio/archivo.ext
@@ -60,7 +62,7 @@ Ahora vamos a mostrar unos comandos que sirven para organizar los archivos:
 > rmdir: borra un directorio.
 
 
-## 1.3. Comandos para trabajar desde nuestra ubicación
+## 2.2. Comandos para trabajar desde nuestra ubicación
 
 Lista los archivos que se encuentran en el directorio sobre el que estamos trabajando:
 
@@ -132,3 +134,4 @@ rm: eliminar un archivo.
 rmdir: eliminar un directorio. En este caso es importante resaltar que, para que el directorio pueda ser eliminado, no puede contener archivos u otros directorios en su interior.
 
 > rmdir [ruta / nombre del directorio a eliminar]
+
