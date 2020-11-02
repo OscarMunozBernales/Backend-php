@@ -198,3 +198,6 @@ Ejemplos:
 
 > awk -F ‘;’ ‘{ print $1}’ nuevasPelis.csv
 
+# 3. Comprender los mecanismos de comunicación y Administración entre procesos.
+
+## 3.1. Comunicación entre procesos: Qué són y cómo se utilizan los flujos estándar
