@@ -201,3 +201,52 @@ Ejemplos:
 # 3. Comprender los mecanismos de comunicación y Administración entre procesos.
 
 ## 3.1. Comunicación entre procesos: Qué són y cómo se utilizan los flujos estándar
+
+![Procesamiento de datos](assets/procesamientoDeDatos.png)
+
+Los canales por donde ingresan los datos y sale información se conocen como flujos, la terminal conoce 3 flujos:
+- La entrada estandar.
+- La salida estandar.
+- El error estandar.
+
+Ejemplo:
+Tenemos un teclado como entrada y la salida (y el error) es la pantalla.
+
+Pero existe varias situaciones en donde no es así como se dice en el ejemplo, estos procesos se conocen como redirección que consta de cambiar la entrada estandar del teclado por un archivo previamente estructurado.
+
+- **nombre_comando < nombre_archivo.txt**: Redirecciona la entrada de un comando __nombre_comando__ con el contenido del archivo __nombre_archivo.txt__ 
+```sql
+> mysql -h localhost -u root -p1234 < dump1.sql
+```
+Lo que va hacer es cargar los datos del .sql en la base de datos.
+
+- **nombre_comando > nombre_archivo.txt**: Redirecciona la salida de un comando __nombre_comando__ reescribiendo el contenido del archivo __nombre_archivo.text__
+```
+> ls > archivo.txt
+```
+Guarda los nombre de los archivos dentro del archivo.txt.
+
+- **nombre_comando >> nombre_archivo.txt**: Redirecciona la salida de un comando __nombre_comando__ agregando al final del contenido del archivo __nombre_archivo.txt__.
+```
+> ls >> archivo.txt 
+
+> ls -l >> arhivo.txt
+```
+
+- **$comando | more**: Muestra el resultado de un comando __nombre_comando__ en secciones
+    - Con enter muestra el resultado con una línea más por cada uno.
+    - Con la barra espaciadora muestra otra pantalla o sección.
+```
+# La utilidad more, muestra resultados largos en varias pantallas.
+> ls -al | more
+```
+
+- **$comando | wc**: Muestra en el resultado de un comando __nombre_comando__ cuantos caracteres, palabras o líneas hay en el resultado.
+```
+> cat dump.sql | wc
+```
+
+- **$comando | wc**: Muestra en el resultado de un comando __nombre_comando__ cuantas líneas hay en el resultado.
+```
+> cat dump.sql | wc -l
+```
