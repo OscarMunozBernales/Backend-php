@@ -250,3 +250,22 @@ Guarda los nombre de los archivos dentro del archivo.txt.
 ```
 > cat dump.sql | wc -l
 ```
+## 3.2. Practica 2
+
+## 3.3.  Administración de procesos en background y foreground.
+
+Vamos a ver los procesos en primer y segundo plano, veamos algunos ejemplos:
+
+- **$comando $**: Ejecuta el proceso __$comando__ en segundo plano, otra opción es apretar ctrl + z.
+- **fg**: Trae a primer plano un comando que se este ejecutando en segundo plano.
+- **ps**: Muestra los procesos que están en ejecución.
+- **ps -ax**: Muestra los procesos que se están ejecutando del sistema.
+- **top**: Muestra de forma interactiva como los procesos van cambiando en tiempo real, con la letra q se sale de la interfaz.
+- **kill -numero_prioridad numero_proceso**: Termina un proceso con prioridad, con la identificación del número del proceso.
+```
+> kill -9 13065
+```
+- **killall -numero_prioridad nombre_ejecutable**: Termina un proceso con prioridad, con la identificación del nombre dle ejecutable del procesos __nombre_ejecutbale__
+```
+> killall -9 'php colgado.php'
+```
