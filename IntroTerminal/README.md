@@ -269,3 +269,49 @@ Vamos a ver los procesos en primer y segundo plano, veamos algunos ejemplos:
 ```
 > killall -9 'php colgado.php'
 ```
+
+## 3.4. Permisos sobre archivos: El sistema de permisos octal
+
+Unix fue diseñado como un sistema multiusuario, esto implica que ciertas cuestiones basicas de seguridad estan plasmadas en cada uno de ellos, esto quiere decir que los archivos que pertenecen a un usuario no puedan ser accedidas por otro usuario, a menos que el usuario le de permiso.
+
+### Usuarios:
+- **Dueño**
+- **Grupo**
+- **Otros**
+
+### Permisos: 
+- **Lectura R**
+- **Escritura W**
+- **Ejecución X**
+
+![ListadoPermisos](assets/listadoPermisos.png)
+
+un ejemplo es __drwxr-xr-x__ acá podemos ver que el primer caracter corresponde a una d (de directorio, l de link a otra carpeta) y estan los demas permisos __R W X__ el guien entre medio significa que el permiso está denegado, entonces tenemos los siguiente ejemplos:
+
+- **drwxr-xr-x**: el usuario actual tiene todos los permisos, el grupo de usuario solo de lectura y ejecución y otros usuarios tienen permiso de lectura y ejecución en el directorio.
+- **drwxrwxrwx**: Todos los usuarios y grupos de usuarios tienen permiso de lectura, escritura y ejecución sobre el directorio.
+- **drwx------**: El usuario actual tiene todos los permisos sobre el directorio, mientras que los grupos de usuarios y otros no tienen ni un solo permiso sobre el directorio.
+
+### Permisos.
+Para alterar los permisos asociados tenemos los siguientes comandos:
+- **chmod**: Es el principal, que nos cambia individualmente los permisos.
+- **chown**: Cambia el usuario propietario del archivo o directorio.
+- **chgrp**: Cambia el grupo de usaurio que pueda acceder al archivo o directorio.
+
+| Comando | Definición y/o ejemplos|
+|--|--|
+| > chmod o-w nombre_archivo.txt| Modifica los permisos de un archivo o directorio para los usuario: o para otros usuario, -w quitar el permiso de escritura del archivo| 
+| > chmod +x nombre_archivo.txt | Modifica los permisos de un archivo o directorio para los usuarios: +x agrega permisos de ejecución a todos los usuarios|
+| > chmod 760 nombre_archivo.txt | Modifica los permisos de un archivo o directorio para los usuarios: 7 todos los permisos para el usuario, 6 permiso de R W para el grupo y 0 permisos para los otros grupos (mas adelante explicamos esta sintaxis numerica)|
+
+### Sintaxis Numérica
+![sintaxisNumerica](assets/sintaxisNumerica.png)
+
+Acá podemos observar, si tomamon la última fila de cada usuario, la del dueño es 111 al igual que la de grupos y otros, si pasamos de 111 a decimal tenemos el número 7 y por eso formamos el 777, de la misma forma aparece el numero 640 en el ejemplo. De esta forma se pueden dar los permisos con **chmod**
+
+| comando | Definición y/o ejemplos |
+| -- |-- |
+| > sudo nombre_comando | Permite ejecutar comandos con permisos especiales (comandos que no se dejan ejecutar  por cualquier usuario), como si fuera el root (administrador del sistema) | 
+| > sudo chown nombre_usuario nombre_archivo.txt | Cambia el propietario de un archivo por otro usuario del sistema |
+| > sudo chgrp nombre_grupo nombre_archivo.txt | Cambia el grupo de un archivo por otro grupo del sistema|
+
