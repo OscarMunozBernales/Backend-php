@@ -315,3 +315,20 @@ Acá podemos observar, si tomamon la última fila de cada usuario, la del dueño
 | > sudo chown nombre_usuario nombre_archivo.txt | Cambia el propietario de un archivo por otro usuario del sistema |
 | > sudo chgrp nombre_grupo nombre_archivo.txt | Cambia el grupo de un archivo por otro grupo del sistema|
 
+
+## 3.5. Sistema de manejo de paquetes.
+
+### Paquetes binarios.
+- apt: usado principalmente en las distribuciones de linux
+- zypper: Se usa en otras distribuciones.
+- rpm: es un poco mas ruticos que los demas
+
+### Paquetes de lenguajes
+- pip: Paquete para python.
+- composer: Se utiliza con php.
+- npm: Se utiliza para node.js
+
+### Otros.
+- conda.
+- homebrew.
+
