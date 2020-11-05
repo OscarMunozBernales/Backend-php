@@ -412,3 +412,16 @@ Busqueda de archivos:
 # Busca archivos (directorio) que hayan sido modificados hace mas de 7 dias y ademas copia el resultado con los mismo nombres ({}) en la carpeta llamada backup, y se finalizacon el \;
 ```
 
+## 4.3. Herramientas para interactuar a través de HTTP
+
+Interacción de HTTP, comando HTTP:
+- curl: Se utiliza para hacer pedidos crudos, y se muestra todo por pantalla.
+- wget: Realiza descargar a través de servidores HTTP
+
+| comando | descripción |
+| -- | -- |
+| > curl https://platzi.com | Sirve para hacer pedidos crudos a un servidor HTTP desde su Url nos devuelve el HTML del servidor |
+| > curl -v https://platzi.com | Sirve para hacer pedidos crudos a un servidor HTTP desde su Url nos devuelve el HTML del servidor y toda la comunicación HTTP |
+| > curl -v https://platzi.com > /dev/null | Sirve para hacer pedidos crudos a un servidor HTTP desde su Url nos devuelve toda la información de encabezados HTTP |
+| > wget https://url.com | Sirve para realizar descargas desde servidores HTTP archivos binarios | 
+
