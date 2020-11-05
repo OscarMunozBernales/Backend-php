@@ -373,3 +373,42 @@ Sirve para comprimir una serie de archivos y se ocupa de la siguiente forma:
 # Descomprimir
 > tar xzf empaquetado.tar.gz
 ```
+
+## 4.2. Herramientas de búsqueda de archivos.
+
+Busqueda de archivos:
+- locate: Herramienta que nos permite hacer una busqueda en todo tu sistema, el unico problema es que hay que estar constantemente actualizandola.
+```
+> locate archivo.txt
+```
+- whereis: Herramienta que nos permite hacer una busqueda de todos los archivos binarios osea comandos
+```
+> whereis echo
+> echo: /bin/echo /usr/shere/man/man1/echo.1.gz
+```
+- Find: Herramientas mucho mas potente en donde podemos agregar condiciones de busqueda y en que carpeta buscar.
+```
+> find [ruta] [expresión_de_busqueda] [acción]
+
+# ruta: si no se indica una ruta se toma en cuenta la del directorio actual. Es posible asignar mas de una ruta de búsqueda tambien como por ejemplo:
+> find /etc /usr /var -group admin
+
+# Búsquedas básicas: algunas bandersa que podemos utilizar para buscar son:
+
+# -name: Busca nombre de un archivo
+# iname: Igual que -name pero este no toma en consideración si tiene alguna mayúscula
+# -user: El usuario propietario
+# -group: el grupo propietario
+# -type: Tipo de archivo, f para directorios
+
+# Búsqueda a través del tiempo
+# -mmin: tiempo en minutos
+# -mtime: periodos de 24 horas
+
+# -exec: Permite ejecutar acciones sobre el resultado de cada línea o archivo devuelto por find, ejemplo:
+
+> find . type -f -mtime +7 -exec cp {} ./backup/ \;
+
+# Busca archivos (directorio) que hayan sido modificados hace mas de 7 dias y ademas copia el resultado con los mismo nombres ({}) en la carpeta llamada backup, y se finalizacon el \;
+```
+
