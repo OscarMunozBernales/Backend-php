@@ -332,3 +332,44 @@ Acá podemos observar, si tomamon la última fila de cada usuario, la del dueño
 - conda.
 - homebrew.
 
+# 4. Conocer herramientas avanzadas.
+
+## 4.1. Herramientas de comprensión y combinación de archivos
+
+Para poder comprimir archivos, tenemos 3 herramientas listas para ocupar.
+
+### Archivo .gz
+Sirve para comprimir archivos y se ocupa de la siguiente forma.
+```
+# Para comprimir
+> gzip nombre_archivo.txt
+
+# Para descomprimir
+> gzip -d nombre_archivo.txt.gz
+```
+
+### Archivos .tar
+Sirve para agrupar una serie de archivos y se ocupa de la siguiente forma:
+```
+# para empaquetar.
+> tar cf nombre_paquete.tar carpeta/
+
+# Ver el contenido del paquete
+> tar tf nombre_paquete.tar
+
+# Empaquetar y ver contenido empaquetado.
+> tar -cvf nombre_paquete.tar carpeta/
+
+# Desempaquetar
+> tar xf nombre_paquete.tar
+```
+
+### Archivos .tar.gz
+Sirve para comprimir una serie de archivos y se ocupa de la siguiente forma:
+```
+# Empaquetar y comprimir
+> tar czf empaquetado.tar.gz carpeta/
+
+# Descomprimir
+> tar xzf empaquetado.tar.gz
+```
