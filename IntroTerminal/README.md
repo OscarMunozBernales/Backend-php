@@ -425,3 +425,21 @@ Interacción de HTTP, comando HTTP:
 | > curl -v https://platzi.com > /dev/null | Sirve para hacer pedidos crudos a un servidor HTTP desde su Url nos devuelve toda la información de encabezados HTTP |
 | > wget https://url.com | Sirve para realizar descargas desde servidores HTTP archivos binarios | 
 
+## 4.4. ¿Qué son y cómo se utilizan las variables de entorno?
+
+Si ejecutamos 
+```
+> echo $PATH
+```
+Nos va a mostrar el conjunto de las variables de entorno que exite en nuetro sistema, como por ejemplo, composer, git, ls, ls -a,etc.
+
+### Asignación
+- Para un comando: 
+```
+>MI_VAR=/home php env.php
+```
+- Global: 
+```
+> export MI_VAR=OSCAR
+> echo $MI_VAR
+```
