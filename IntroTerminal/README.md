@@ -443,3 +443,6 @@ Nos va a mostrar el conjunto de las variables de entorno que exite en nuetro sis
 > export MI_VAR=OSCAR
 > echo $MI_VAR
 ```
+
+# 5. Automatizar tareas, el verdadero poder de la terminal
+
