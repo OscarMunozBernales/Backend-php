@@ -447,7 +447,8 @@ Nos va a mostrar el conjunto de las variables de entorno que exite en nuetro sis
 # 5. Automatizar tareas, el verdadero poder de la terminal
 
 ## 5.1. Cómo y para qué escribir scripts en bash
-Basicamente se esciben bash para generar varias sentencias en una sola como por ejemplo
+Basicamente se esciben bash para generar varias sentencias en una sola como por ejemplo, hacer copas de respaldo de base de datos, codigo, archivos etc.
+
 ```
 > vim holaMundo.sh
 
@@ -465,3 +466,5 @@ echo "HOLA MUNDO"
 ```
 
 Estos bash tambien se puede automatizar. 
+
+para saber mas de como escribir bash te deje un pequeño [tutorial](http://trajano.us.es/~fjfj/shell/shellscript.htm#_Toc444081223)
